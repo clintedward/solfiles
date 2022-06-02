@@ -4,8 +4,8 @@
 
 pragma solidity ^0.8.4;
 
-import "https://github.com/net2devcrypto/n2dstaking/AapRewards.sol"; 
-import "https://github.com/net2devcrypto/n2dstaking/Collection.sol"; // this contract will issue the staking rewards to the nft user
+import "https://github.com/clintedward/solfiles/blob/909809a054d90b8b939bbd8ddfbfd1be3525eb5a/AapRewards.sol"; 
+import "https://github.com/clintedward/solfiles/blob/909809a054d90b8b939bbd8ddfbfd1be3525eb5a/Collection.sol"; // this contract will issue the staking rewards to the nft user
 
 contract NFTStaking is Ownable, IERC721Receiver { // IERC721Receiver allows to send and received nfts
 
@@ -24,12 +24,12 @@ contract NFTStaking is Ownable, IERC721Receiver { // IERC721Receiver allows to s
 
   // reference to the Block NFT contract
   Collection nft;
-  N2DRewards token;
+  AapRewards token;
 
   // maps tokenId to stake struct
   mapping(uint256 => Stake) public vault; 
 
-   constructor(Collection _nft, N2DRewards _token) { 
+   constructor(Collection _nft, AapRewards _token) { 
     nft = _nft;
     token = _token;
   }
