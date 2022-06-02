@@ -4,7 +4,7 @@
 
 pragma solidity ^0.8.4;
 
-import "https://github.com/clintedward/solfiles/blob/909809a054d90b8b939bbd8ddfbfd1be3525eb5a/AapRewards.sol"; 
+import "https://github.com/clintedward/solfiles/blob/3f43d03f6973308b3a51f6ac497b5305046b1f0d/AapRewardsMaxSupply.sol"; 
 import "https://github.com/clintedward/solfiles/blob/909809a054d90b8b939bbd8ddfbfd1be3525eb5a/Collection.sol"; // this contract will issue the staking rewards to the nft user
 
 contract NFTStaking is Ownable, IERC721Receiver { // IERC721Receiver allows to send and received nfts
